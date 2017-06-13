@@ -18,7 +18,7 @@ var findRandomCookies = function (store) {
   return cookieSales;
 };
 // ===============================================================
-function createStores (name, minCust, maxCust, avgCookies) {
+function CreateStores (name, minCust, maxCust, avgCookies) {
   this.name = name;
   this.minCust = minCust;
   this.maxCust = maxCust;
@@ -26,57 +26,19 @@ function createStores (name, minCust, maxCust, avgCookies) {
   this.randomCookies = findRandomCookies(this);
 }
 // ===============================================================
-/*var FirstAndPike = {
-  name : 'FirstAndPike',
-  minCust : 23,
-  maxCust : 65,
-  avgCookies : 6.3,
-  randomCookies : [],
-  //
-};
-console.log(FirstAndPike);*/
-var FirstAndPike = new createStores ('First And Pike', 23, 65, 6.3);
-  // randomCookies : [],
+var FirstAndPike = new CreateStores ('First And Pike', 23, 65, 6.3);
 console.log(FirstAndPike);
 
-var SeaTacAirport = {
-  name : 'SeaTac Airport',
-  minCust : 3,
-  maxCust : 24,
-  avgCookies : 1.2,
-  randomCookies : [],
-  //
-};
+var SeaTacAirport = new CreateStores ('SeaTac Airport', 3, 24, 1.2);
 console.log(SeaTacAirport);
 
-var SeattleCenter = {
-  name : 'Seattle Center',
-  minCust : 11,
-  maxCust : 38,
-  avgCookies : 3.7,
-  randomCookies : [],
-  //
-};
+var SeattleCenter = new CreateStores ('Seattle Center', 11, 38, 3.7);
 console.log(SeattleCenter);
 
-var CapitolHill = {
-  name : 'Capitol Hill',
-  minCust : 20,
-  maxCust : 38,
-  avgCookies : 2.3,
-  randomCookies : [],
-  //
-};
+var CapitolHill = new CreateStores ('Capitol Hill', 20, 38, 2.3);
 console.log(CapitolHill);
 
-var Alki = {
-  name : 'Alki',
-  minCust : 2,
-  maxCust : 16,
-  avgCookies : 4.6,
-  randomCookies : [],
-  //
-};
+var Alki = new CreateStores ('Alki', 2, 16, 4.6);
 console.log(Alki);
 
 var getStoreInfo = function (store) {
