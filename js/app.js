@@ -6,7 +6,6 @@ console.log(hours);
 var findRandomCookies = function (store) {
   var total = 0;
   var cookieSales = [];
-  //for loop of length of hours array to do some math
   for (var i = 0; i < 15; i++) {
     var sales = Math.floor(Math.random() * (store.maxCust - store.minCust + 1) + store.minCust);
     cookieSales.push(sales);
@@ -16,7 +15,6 @@ var findRandomCookies = function (store) {
   console.log(total);
   store.randomCookies = cookieSales;
   console.log(cookieSales);
-  // store.randomCookies = cookieSales.slice(0);
   return cookieSales;
 };
 
@@ -98,6 +96,3 @@ getStoreInfo(SeaTacAirport);
 getStoreInfo(SeattleCenter);
 getStoreInfo(CapitolHill);
 getStoreInfo(Alki);
-/*var p = document.createElement('p');
-p.textContent = 'First and Pike ' + store.avgCookies + ' average cookies';
-article.appendChild(p);*/
