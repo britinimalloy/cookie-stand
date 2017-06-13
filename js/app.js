@@ -31,35 +31,73 @@ var FirstAndPike = {
 console.log(FirstAndPike);
 
 
-/*var FirstAndPike = {
-  name : 'FirstAndPike',
-  minCust : 23,
-  maxCust : 65,
-  avgCookies : 6.3,
-  randomCookies:[]
+var SeaTacAirport = {
+  name : 'SeaTac Airport',
+  minCust : 3,
+  maxCust : 24,
+  avgCookies : 1.2,
+  randomCookies : [],
+  //
 };
-console.log(FirstAndPike);*/
-var store = FirstAndPike;
-var random = findRandomCookies(FirstAndPike);
+console.log(SeaTacAirport);
 
-var parentElement = document.getElementById('locations');
+var SeattleCenter = {
+  name : 'Seattle Center',
+  minCust : 11,
+  maxCust : 38,
+  avgCookies : 3.7,
+  randomCookies : [],
+  //
+};
+console.log(SeattleCenter);
 
-var article = document.createElement('article');
-parentElement.appendChild(article);
+var CapitolHill = {
+  name : 'Capitol Hill',
+  minCust : 20,
+  maxCust : 38,
+  avgCookies : 2.3,
+  randomCookies : [],
+  //
+};
+console.log(CapitolHill);
 
-var h2 = document.createElement('h2');
-h2.textContent = store.name;
-article.appendChild(h2);
+var Alki = {
+  name : 'Alki',
+  minCust : 2,
+  maxCust : 16,
+  avgCookies : 4.6,
+  randomCookies : [],
+  //
+};
+console.log(Alki);
 
-var ul = document.createElement('ul');
-article.appendChild(ul);
+var getStoreInfo = function (store) {
+  var random = findRandomCookies(store);
 
-for (var i = 0; i < 16; i++) {
-  var li = document.createElement('li');
-  li.textContent = hours[i] + random[i];
-  ul.appendChild(li);
-}
+  var parentElement = document.getElementById('locations');
 
+  var article = document.createElement('article');
+  parentElement.appendChild(article);
+
+  var h2 = document.createElement('h2');
+  h2.textContent = store.name;
+  article.appendChild(h2);
+
+  var ul = document.createElement('ul');
+  article.appendChild(ul);
+
+  for (var i = 0; i < 16; i++) {
+    var li = document.createElement('li');
+    li.textContent = hours[i] + random[i];
+    ul.appendChild(li);
+  }
+};
+
+getStoreInfo(FirstAndPike);
+getStoreInfo(SeaTacAirport);
+getStoreInfo(SeattleCenter);
+getStoreInfo(CapitolHill);
+getStoreInfo(Alki);
 /*var p = document.createElement('p');
 p.textContent = 'First and Pike ' + store.avgCookies + ' average cookies';
 article.appendChild(p);*/
