@@ -13,12 +13,20 @@ var findRandomCookies = function (store) {
   }
   cookieSales.push(total);
   console.log(total);
-  store.randomCookies = cookieSales;
+  //store.randomCookies = cookieSales;
   console.log(cookieSales);
   return cookieSales;
 };
-
-var FirstAndPike = {
+// ===============================================================
+function createStores (name, minCust, maxCust, avgCookies) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookies = avgCookies;
+  this.randomCookies = findRandomCookies(this);
+}
+// ===============================================================
+/*var FirstAndPike = {
   name : 'FirstAndPike',
   minCust : 23,
   maxCust : 65,
@@ -26,8 +34,10 @@ var FirstAndPike = {
   randomCookies : [],
   //
 };
+console.log(FirstAndPike);*/
+var FirstAndPike = new createStores ('First And Pike', 23, 65, 6.3);
+  // randomCookies : [],
 console.log(FirstAndPike);
-
 
 var SeaTacAirport = {
   name : 'SeaTac Airport',
