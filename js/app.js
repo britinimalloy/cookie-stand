@@ -44,7 +44,17 @@ CreateStores.prototype.render = function(table) {
   }
 };
 
-// instantiate all the objects
+// =========event handling=========================================
+/*var locationForm = document.getElementById('addLocationsInformation');
+
+locationForm.addEventListener('submit',
+  function (event) {
+    //
+  }
+  //
+};*/
+
+// =========instantiate all the objects============================
 var FirstAndPike = new CreateStores ('First And Pike', 23, 65, 6.3);
 console.log(FirstAndPike);
 
@@ -67,8 +77,10 @@ function tableRender () {
   var parentElement = document.getElementById('locations');
   var table = document.createElement('table');
   parentElement.appendChild(table);
+
   var row1 = document.createElement('tr');
   table.appendChild(row1);
+
   var th = document.createElement('th');
   row1.appendChild(th);
 
