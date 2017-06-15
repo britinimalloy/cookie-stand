@@ -9,7 +9,28 @@
     <header></header>
     <main>
       <h1>Locations:</h1>
-      <div id="locations"></div>
+      <div id="locations">
+      </div>
+      </br>
+      <form id="addLocationsInformation">
+        <fieldset>
+          <input name="location" />
+          <label>Location</label>
+          </br>
+          </br>
+          <input name="custMin" />
+          <label>Minimum Customers</label>
+          </br>
+          </br>
+          <input name="custMax" type="number" step="1"/>
+          <label>Maximum Customers</label>
+          </br>
+          </br>
+          <input name="cookieAvg" type="number" step=".1" />
+          <label>Average Cookies</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
     </main>
     <footer></footer>
     <script src="js/app.js"></script>
